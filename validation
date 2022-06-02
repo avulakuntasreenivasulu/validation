@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <style>
+        form{
+            width: 330px;
+        }
+        #formtitle{
+            /* text align: center; */
+            margin-left: 155px;
+            margin-bottom: 5px;
+        }
+        label{
+            width: 150px;
+            display: inline-block;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        button{
+            margin-left: 105px;
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="#" method="get">
+        <div id="formtitle">
+            New User Registration
+        </div>
+        <div>
+          <label for="Uname">User name</label>
+          <input required name="uname" id="Uname" type="text">
+        </div>
+     ` <div>
+         <label for="Uage">User age</label>
+         <input required min="18" max="90" name="uage" id="Uage" step="0.5" type="number">
+       </div>
+       <div>
+        <label for="Uphone">User Land phone</label>
+        <input required name="uphone" title="###-########" pattern="\d{3}-\d{8}" id="Uphone" type="tel">
+       </div>
+       <div>
+        <label for="Umail">User Email</label>
+        <input required name="uemail" pattern="\S+@\S+\.\S+"id="Umail" id="Email">
+       </div>
+      <button type="submit">Register</button>
+    </form>
+    <script>
+         function init(){
+            if(document.getElementById("uname").value ==""){
+               document.getElementById("uname").setCustomValidity("you must to fill your name");
+            }else{
+               document.getElementById("uname").setCustomValidity("");
+            }
+        }
+         
+
+         
+         function init(){
+            if(document.getElementById("uage").value == ""){
+             document.getElementById("uage").setCustomValidity("you must to fill your uage");
+
+            } else{
+
+               document.getElementById("uage").setCustomValidity("");
+            }
+
+
+         
+         function init(){
+            if(document.getElementById("uemail").value == ""){
+             document.getElementById("uemail").setCustomValidity("you must to fill your uemail");
+
+            } else{
+
+               document.getElementById("uemail").setCustomValidity("");
+            }
+
+           
+         function init(){
+            if(document.getElementById("uphone").value == ""){
+             document.getElementById("uphone").setCustomValidity("you must to fill your uphone");
+
+            } else{
+
+               document.getElementById("uphone").setCustomValidity("");
+            }
+            
+
+
+       
+        
+    </script>
+</body>
+</html>
